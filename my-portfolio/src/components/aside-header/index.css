@@ -1,0 +1,29 @@
+/* <header className="desktop-header">
+<div className="desktop-header__img-container">
+  <img className="desktop-header__img-container" src={Foto} alt="" />
+</div>
+<h2 className="desktop-header__Name">Marcelo Puppio</h2>
+<h4 className="desktop-header__Area">Frontend Developer</h4>
+<DesktopNav />
+</header> */
+
+.desktop-header {
+  height: 90vh;
+  width: 298px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  margin-left: 32px;
+  border: solid rgba(245, 245, 245, 0.2) 2px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 53px;
+}
+.desktop-header__img-container {
+  width: 177px;
+  height: 177px;
+  overflow: hidden;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+}
