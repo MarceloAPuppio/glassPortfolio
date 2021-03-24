@@ -6,6 +6,16 @@
   --primario3: #d6bcef;
   --primario4: #eadcf8;
   --text-color: #505050;
+  --glasslight: rgba(255, 255, 255, 0.4);
+  --bg: linear-gradient(
+    to right,
+    var(--primario4) 10%,
+    var(--primario2) 50%,
+    var(--Primario1) 100%
+  );
+}
+body.dark-mode {
+  --bg: #1d1d1d;
 }
 * {
   box-sizing: border-box;
@@ -13,17 +23,10 @@
   padding: 0;
 }
 body {
-  background: linear-gradient(
-    to right,
-    var(--primario4) 10%,
-    var(--primario2) 50%,
-    var(--Primario1) 100%
-  );
+  background: var(--bg);
   height: 100vh;
   width: 100vw;
   position: relative;
-  display: flex;
-  align-items: center;
   font-family: "Noto Sans", sans-serif;
   color: var(--text-color);
 }

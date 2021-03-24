@@ -1,0 +1,25 @@
+.main {
+  background: red;
+  margin: 0 32px;
+  height: 90vh;
+  overflow-y: auto;
+  display: grid;
+
+  grid-template-columns: calc(100vw - calc(32px * 3 + 298px));
+  grid-template-rows: 100% 100% 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.main .section {
+  height: 100%;
+  width: 100%;
+  background: var(--glasslight);
+}
+
+.main .section:nth-child(1) {
+}
+.main .section:nth-child(2) {
+}
+.main .section:nth-child(3) {
+}
