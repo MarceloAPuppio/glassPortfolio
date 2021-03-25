@@ -1,29 +1,29 @@
 /* <div className="item-container">
 <a href="#" className="item-container__anchor">
   <i className={`fas ${icon} item-container__icon `}></i>
-  <span className="item-container__span">sdsd</span>
 </a>
 </div> */
-.item-container {
+
+.social-container {
   position: relative;
-  width: 175px;
+  width: 52px;
   height: 52px;
   border-radius: 5px;
   display: flex;
-  background: rgba(255, 255, 255, 0.2);
   justify-content: center;
   align-items: center;
   align-content: center;
   overflow: hidden;
   border: solid var(--glasslight) 0.5px;
   transition: all 0.3s ease-in-out;
+  margin: 10px;
 }
-.item-container:hover {
+.social-container:hover {
   transform: scale(1.05);
   box-shadow: 1px 1px 10px rgba(243, 243, 243, 0.212), -1px -1px 2px whitesmoke;
 }
 
-.item-container::before {
+.social-container::before {
   position: absolute;
   content: "";
   height: 52px;
@@ -33,22 +33,19 @@
   left: -70px;
   transition: transform 0.5s ease-in-out;
 }
-.item-container:hover::before {
+.social-container:hover::before {
   transform: translateX(290px) skew(-60deg);
 }
 
-.item-container__anchor {
+.social-container__anchor {
   width: 100%;
   text-decoration: none;
   color: inherit;
   display: flex;
   justify-content: flex-start;
 }
-.item-container__icon {
+.social-container__icon {
   font-size: 32px;
   color: var(--Primario1);
   margin: 0 10px;
-}
-.item-container__span {
-  font-size: 16px;
 }

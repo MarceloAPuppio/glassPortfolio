@@ -1,12 +1,13 @@
 .main {
-  background: red;
   margin: 0 32px;
   height: 90vh;
   overflow-y: auto;
   display: grid;
 
+  scroll-behavior: smooth;
+
   grid-template-columns: calc(100vw - calc(32px * 3 + 298px));
-  grid-template-rows: 100% 100% 100%;
+  grid-template-rows: 100% 50% 50%;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -15,10 +16,107 @@
   height: 100%;
   width: 100%;
   background: var(--glasslight);
+  border-radius: 10px;
 }
+/* <div classNameName="home__img-container">
+            <img classNameName="home__img-container" src={Foto} alt="" />
+          </div>
+          <h1 className="section-home__title">Marcelo Puppio</h1>
+          <h5 className="section-home__subtitle">Jr Developer</h5>
+          <div className="section-home__icon-container">
+            <a href="#" className="section-home__icon-container__icon">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" className="section-home__icon-container__icon">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="#" className="section-home__icon-container__icon">
+              <i className="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" className="section-home__icon-container__icon">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
+          <button className="section-home__btn">Contactame</button>
+          <div className="section-home__btn-icon-container">
+            <p className="section-home__btn-icon-container__text">Scroll</p>
+            <i className="far fa-hand-point-down section-home__btn-icon-container__icon"></i>
+          </div> */
 
 .main .section:nth-child(1) {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
+
+.section-home__title {
+  font-size: 44px;
+}
+.section-home__subtitle {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.section-home__icon-container {
+  /* display: flex;
+  flex-flow: column;
+  margin: 20px 0; */
+  display: grid;
+  grid-gap: 0.5rem;
+  place-items: center;
+  grid-template-columns: repeat(2, 52px);
+  grid-template-rows: repeat(4, 52px);
+  grid-template-areas:
+    "a b"
+    "e f "
+    "k l"
+    "o p";
+}
+.a {
+  grid-area: a;
+}
+.f {
+  grid-area: f;
+}
+.k {
+  grid-area: k;
+}
+.p {
+  grid-area: p;
+}
+
+.section-home__btn {
+  border: solid var(--glasslight) 0.5px;
+  transition: all 0.3s ease-in-out;
+  background: var(--glasslight);
+  margin: 10px;
+  width: 150px;
+  height: 52px;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 18px;
+}
+
+.section-home__btn:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 10px rgba(243, 243, 243, 0.212), -1px -1px 2px whitesmoke;
+}
+
+.section-home__btn::before {
+  position: absolute;
+  content: "";
+  height: 52px;
+  width: 20px;
+  background: var(--glasslight);
+  transform: skew(-60deg);
+  left: -70px;
+  top: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.section-home__btn:hover::before {
+  transform: translateX(290px) skew(-60deg);
+}
+
 .main .section:nth-child(2) {
 }
 .main .section:nth-child(3) {

@@ -8,7 +8,7 @@
 </header> */
 
 .desktop-header {
-  height: 90vh;
+  height: 60vh;
   width: 298px;
   background: var(--glasslight);
   backdrop-filter: blur(5px);
